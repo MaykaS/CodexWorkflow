@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="panel game-panel">
+      <div class="panel-header">
+        <p class="eyebrow">Retro Arcade</p>
+        <h1>Classic Tetris</h1>
+      </div>
+      <div class="board-shell">
+        <canvas id="game-board" width="300" height="600" aria-label="Tetris board"></canvas>
+        <div id="overlay" class="overlay visible" aria-live="polite">
+          <p id="overlay-status" class="overlay-status">Press Start</p>
+          <p id="overlay-message" class="overlay-message">Stack blocks, clear rows, and survive the speed-up.</p>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel info-panel">
+      <div class="stat-card">
+        <span class="stat-label">Score</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">State</span>
+        <strong id="state-label">Idle</strong>
+      </div>
+
+      <div class="controls">
+        <button id="start-btn" class="arcade-button">Start</button>
+        <button id="restart-btn" class="arcade-button secondary">Restart</button>
+      </div>
+
+      <div class="legend">
+        <h2>Controls</h2>
+        <ul>
+          <li>Left / Right: Move</li>
+          <li>Down: Soft drop</li>
+          <li>Up: Rotate</li>
+          <li>Space: Hard drop</li>
+          <li>P: Pause / Resume</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
